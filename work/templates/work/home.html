@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thanapoom Rattanathumawat</title>
+    <link
+      href="{% static '/css/main.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card card-body profilehieght" id="profile-wrapper">
+            <img
+              id="profile-pic"
+              src="{% static 'images/profilepicture.png' %}"
+            />
+            <hr />
+            <h4>Software & Knowledge Engineer</h4>
+            <p>
+              I am a fourth year software & knowledge engineering student at
+              Kasetsart University.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card card-body">
+            <h4>Interests and Hobbies</h4>
+            <hr />
+            <p>
+              I have always enjoyed playing games on the computer, once in touch
+              with the technicality of its functions I have ever since wanted to
+              learn more. I am interested in E sports, game design, coding and
+              music. Whenever I'm free I find time to spend on my hobbies.
+              Currently a self taught bassist and guitarist looking to learn
+              more.
+            </p>
+          </div>
+          <br />
+          <div class="row"">
+          <div class="col-md-12">
+            <div class="card card-body">
+              <h4>Educational History at Kasetsart University (Bangkhen)</h4>
+              <hr />
+              <ul>
+                <li>Object Oriented Programming I</li>
+                <li>Object Oriented Programming II</li>
+                <li>Individual Software Development Process</li>
+                <li>Digital Game Production</li>
+                <li>Mobile Software Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <br />
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-body githubrepo">
+            <h4>HoleNewLevel</h4>
+            <hr />
+            <p>
+              HoleNewLevel is my first solo project done in my game development
+              course using Unity engine. This game was done purely using Unity
+              without any access assets. The goal is to tilt the board to get
+              the ball into the hole. As you progress through the levels there
+              lies more obstecles
+            </p>
+            <a href="https://github.com/poom201211/HoleNewLevel">
+              Github
+              <img src="{% static 'images/lmao.png' %}" />
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-body githubrepo">
+            <h4>RADII (BACKEND)</h4>
+            <hr />
+            <p>
+              Radii is a event recommending website powered by Cafeine, which is
+              a API service for recommendation based on Implicit Collaborative
+              filtering Library. My part as a backend developer was to write
+              controller and model classes in connectivity with the initialized
+              SQL database.
+            </p>
+            <a href="https://github.com/pknn1/radii">
+              Github
+              <img src="{% static 'images/lmao.png' %}" />
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-body githubrepo">
+            <h4>Special Snake Game</h4>
+            <hr />
+            <p>
+              This game is your typical Snake game. Starting at a position you
+              venture through the square map trying to eat apples in order to
+              grow. There is a special feature which I have included in this
+              game, which is the ability to return to a specific position saved.
+            </p>
+            <br />
+            <a href="https://github.com/poom201211/SSD-Lab-Project">
+              Github
+              <img src="{% static 'images/lmao.png' %}" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-body">
+            <h4>Contact me</h4>
+            <hr />
+            <form method="POST" action="">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  name="subject"
+                  type="subject"
+                  class="form-control"
+                  id="subject"
+                  placeholder="Enter subject"
+                />
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input
+                  name="description"
+                  type="description"
+                  class="form-control"
+                  id="description"
+                  placeholder="Enter description"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </body>
+</html>
